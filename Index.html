@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agrilinkx</title>
+
+<style>
+html {scroll-behavior:smooth;}
+body {margin:0; font-family:Arial; background:#f9fafb;}
+
+.nav {display:flex; justify-content:space-between; padding:20px 40px; background:#fff;}
+.logo {font-weight:bold;}
+
+.hero {
+padding:100px 20px;
+text-align:center;
+background:linear-gradient(to right,#1b5e20,#2e7d32);
+color:white;
+}
+
+.section {
+padding:60px 20px;
+text-align:center;
+opacity:0;
+transform:translateY(40px);
+transition:0.6s;
+}
+
+.section.show {
+opacity:1;
+transform:translateY(0);
+}
+
+.grid {
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.card {
+background:white;
+padding:25px;
+width:260px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+.btn {
+padding:12px 24px;
+background:#1b5e20;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+.cta {
+background:#1b5e20;
+color:white;
+padding:60px;
+}
+
+.footer {
+background:#111;
+color:white;
+padding:20px;
+text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="nav">
+<div class="logo">Agrilinkx</div>
+<div>Agri Supply Chain</div>
+</div>
+
+<div class="hero">
+<h1>Reliable Agri Supply Chains</h1>
+<p>Connecting farmers, suppliers & global buyers</p>
+<a href="#contact"><button class="btn">Get Started</button></a>
+</div>
+
+<div class="section">
+<h2>What We Do</h2>
+<div class="grid">
+<div class="card">🌾 Direct Sourcing</div>
+<div class="card">🚚 Logistics</div>
+<div class="card">🌍 Export Support</div>
+</div>
+</div>
+
+<div class="section">
+<h2>Why Choose Us</h2>
+<div class="grid">
+<div class="card">Verified Supplier Network</div>
+<div class="card">Transparent Pricing</div>
+<div class="card">Reliable Fulfillment</div>
+</div>
+</div>
+
+<div class="section">
+<h2>Products</h2>
+<div class="grid">
+<div class="card">Rice</div>
+<div class="card">Spices</div>
+<div class="card">Grains</div>
+</div>
+</div>
+
+<div class="section">
+<h2>Testimonials</h2>
+<p>"Reliable sourcing partner" - Buyer</p>
+<p>"Consistent quality delivery" - Distributor</p>
+</div>
+
+<div class="cta" id="contact">
+<h2>Partner With Agrilinkx</h2>
+
+<form action="https://formsubmit.co/viswa@agrilinkx.com" method="POST">
+<input type="text" name="name" placeholder="Your Name" required><br><br>
+<input type="email" name="email" placeholder="Your Email" required><br><br>
+
+<input type="hidden" name="_captcha" value="false">
+
+<button class="btn">Send Inquiry</button>
+</form>
+
+<p>Email: viswa@agrilinkx.com</p>
+</div>
+
+<div class="footer">
+© Agrilinkx | Pan-India Supply Network
+</div>
+
+<script>
+const sections = document.querySelectorAll('.section');
+
+window.addEventListener('scroll', () => {
+sections.forEach(sec => {
+const top = sec.getBoundingClientRect().top;
+if(top < window.innerHeight - 100){
+sec.classList.add('show');
+}
+});
+});
+</script>
+
+</body>
+</html>
